@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class LightSwitch : MonoBehaviour, IInteractable
 {
-    public Light lightSource;
+    public GameObject lightObject; // Asigna aquí el objeto completo que tiene la luz
 
     public void Interact()
     {
-        if (lightSource != null)
-            lightSource.enabled = !lightSource.enabled;
+        if (lightObject != null)
+            lightObject.SetActive(!lightObject.activeSelf);
     }
 }

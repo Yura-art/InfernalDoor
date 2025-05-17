@@ -11,15 +11,19 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (Input.GetKeyDown(interactKey))
         {
-            Ray ray = new Ray(transform.position, transform.forward);
-            if (Physics.Raycast(ray, out RaycastHit hit, interactDistance))
+            // Busca todos los colliders cercanos en un radio de interactDistance
+            Collider[] colliders = Physics.OverlapSphere(transform.position, interactDistance);
+
+            foreach (Collider col in colliders)
             {
-                IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+                IInteractable interactable = col.GetComponent<IInteractable>();
                 if (interactable != null)
                 {
                     interactable.Interact();
+                    return; // Interactúa solo con el primero que encuentre
                 }
             }
         }
     }
 }
+
