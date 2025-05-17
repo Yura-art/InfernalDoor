@@ -11,7 +11,7 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (Input.GetKeyDown(interactKey))
         {
-            // Busca todos los colliders cercanos en un radio de interactDistance
+           
             Collider[] colliders = Physics.OverlapSphere(transform.position, interactDistance);
 
             foreach (Collider col in colliders)
@@ -20,7 +20,7 @@ public class PlayerInteractor : MonoBehaviour
                 if (interactable != null)
                 {
                     interactable.Interact();
-                    return; // Interactúa solo con el primero que encuentre
+                    return; 
                 }
             }
         }

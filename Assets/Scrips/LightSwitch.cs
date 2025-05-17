@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightSwitch : MonoBehaviour, IInteractable
 {
-    public GameObject lightObject; // Asigna aquí el objeto completo que tiene la luz
+    public GameObject lightObject; 
 
     public void Interact()
     {

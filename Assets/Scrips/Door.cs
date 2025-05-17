@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
-    public float rotationAngle = -90f;           // Ángulo negativo para abrir hacia adentro
-    public float rotationSpeed = 90f;            // Grados por segundo
-    public Vector3 rotationAxis = Vector3.up;    // Eje de rotación
+    public float rotationAngle = -90f;           
+    public float rotationSpeed = 90f;            
+    public Vector3 rotationAxis = Vector3.up;    
 
     private Quaternion closedRotation;
     private Quaternion openRotation;
