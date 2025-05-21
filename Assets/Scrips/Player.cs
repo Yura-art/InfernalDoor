@@ -11,7 +11,7 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (Input.GetKeyDown(interactKey))
         {
-           
+
             Collider[] colliders = Physics.OverlapSphere(transform.position, interactDistance);
 
             foreach (Collider col in colliders)
@@ -20,8 +20,24 @@ public class PlayerInteractor : MonoBehaviour
                 if (interactable != null)
                 {
                     interactable.Interact();
-                    return; 
+                    return;
                 }
+
+            }
+        }
+    }
+
+    public void MeLaPelan()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, interactDistance);
+
+        foreach (Collider col in colliders)
+        {
+            IInteractable interactable = col.GetComponent<IInteractable>();
+            if (interactable != null)
+            {
+                interactable.Interact();
+                return;
             }
         }
     }

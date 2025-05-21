@@ -5,7 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     [SerializeField] float speedMovement;
-
+    [SerializeField] Joystick Joystick;
 
 
     void Start()
@@ -15,8 +15,8 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Joystick.Horizontal; /*Input.GetAxis("Horizontal");*/
+        float vertical = Joystick.Vertical; /*Input.GetAxis("Vertical");*/
 
         Vector3 movement = new Vector3(horizontal, 0f, vertical);
 
