@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInteractor : MonoBehaviour
 {
-    public float interactDistance = 3f;
+    public float interactDistance = 1f;
     public KeyCode interactKey = KeyCode.E;
 
     void Update()
@@ -19,7 +19,7 @@ public class PlayerInteractor : MonoBehaviour
                 IInteractable interactable = col.GetComponent<IInteractable>();
                 if (interactable != null)
                 {
-                    interactable.Interact();
+                    interactable.Interact(gameObject);
                     return;
                 }
 
@@ -36,7 +36,7 @@ public class PlayerInteractor : MonoBehaviour
             IInteractable interactable = col.GetComponent<IInteractable>();
             if (interactable != null)
             {
-                interactable.Interact();
+                interactable.Interact(gameObject);
                 return;
             }
         }

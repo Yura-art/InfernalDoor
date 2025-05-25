@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IInteractable
+public interface IDestroy
 {
-    void Interact(GameObject player);
+    void Destroy(GameObject player);
 }

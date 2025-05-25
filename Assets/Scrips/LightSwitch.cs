@@ -6,7 +6,7 @@ public class LightSwitch : MonoBehaviour, IInteractable
 {
     public GameObject lightObject; 
 
-    public void Interact()
+    public void Interact(GameObject player)
     {
         if (lightObject != null)
             lightObject.SetActive(!lightObject.activeSelf);

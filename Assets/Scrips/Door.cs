@@ -19,7 +19,7 @@ public class Door : MonoBehaviour, IInteractable
         openRotation = Quaternion.AngleAxis(rotationAngle, rotationAxis) * closedRotation;
     }
 
-    public void Interact()
+    public void Interact(GameObject player)
     {
         if (currentCoroutine != null)
         {

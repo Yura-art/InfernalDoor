@@ -6,7 +6,7 @@ public class Radio : MonoBehaviour, IInteractable
 {
     public AudioSource audioSource;
 
-    public void Interact()
+    public void Interact(GameObject player)
     {
         if (audioSource != null)
         {
