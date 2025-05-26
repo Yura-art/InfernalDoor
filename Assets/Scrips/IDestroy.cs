@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IDestroy
 {
-    void Destroy(GameObject player);
+    void Destroy();
 }
