@@ -3294,6 +3294,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 9090616}
+  objetoOriginal: {fileID: 852197064}
+  objetoFracturado: {fileID: 8532839456424120482, guid: 65cc84cc30a8f4f4989adee698eadf0d,
+    type: 3}
+  fuerzaMin: 5
+  fuerzaMax: 100
+  radioExplocion: 10
 --- !u!65 &852197069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3321,6 +3327,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1149355942}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &852197071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852197064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb7eea4b7baf2c4f9991c87e02ad618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetoOriginal: {fileID: 852197064}
+  objetoFracturado: {fileID: 8532839456424120482, guid: 65cc84cc30a8f4f4989adee698eadf0d,
+    type: 3}
+  fuerzaMin: 5
+  fuerzaMax: 100
+  radioExplocion: 10
 --- !u!1001 &868314781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4202,7 +4226,6 @@ GameObject:
   - component: {fileID: 1104680734}
   - component: {fileID: 1104680733}
   - component: {fileID: 1104680737}
-  - component: {fileID: 1104680738}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -4308,20 +4331,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40bddea5fc25e1e4fbd162ee05637959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  siguiendo: 0
   velocidad: 3
   distanciaMinima: 1.5
---- !u!114 &1104680738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104680732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb7eea4b7baf2c4f9991c87e02ad618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   objetoOriginal: {fileID: 1104680732}
   objetoFracturado: {fileID: 6749993295208798505, guid: da6b958168fad96489067d99d945c177,
     type: 3}
@@ -4541,6 +4553,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: radio_vef202
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 412d5b30bf29e2b4eadc0596281f4c6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4553,6 +4570,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 852197068}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 412d5b30bf29e2b4eadc0596281f4c6b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 852197071}
   m_SourcePrefab: {fileID: 100100000, guid: 412d5b30bf29e2b4eadc0596281f4c6b, type: 3}
 --- !u!4 &1183265923 stripped
 Transform:

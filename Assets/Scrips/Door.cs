@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour, IInteractable
+public class Door : MonoBehaviour, IInteractable, IDestroy
 {
     public float rotationAngle = -90f;           
     public float rotationSpeed = 90f;            
@@ -42,5 +42,10 @@ public class Door : MonoBehaviour, IInteractable
 
         transform.rotation = targetRotation;
         currentCoroutine = null;
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject,1);
     }
 }
